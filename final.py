@@ -1,15 +1,11 @@
-# Procedure to add a task
 def add_task(task_list, task_name):
-    """Adds a task to the task list if it doesn't already exist."""
     if task_name not in task_list:
         task_list.append({"name": task_name, "completed": False})
         print(f"Task '{task_name}' added.")
     else:
         print(f"Task '{task_name}' already exists.")
 
-# Procedure to mark a task as completed
 def complete_task(task_list, task_name):
-    """Marks a task as completed if it exists."""
     found = False
     for task in task_list:
         if task["name"] == task_name:
@@ -20,9 +16,7 @@ def complete_task(task_list, task_name):
     if not found:
         print(f"Task '{task_name}' not found.")
 
-# Procedure to display all tasks
 def display_tasks(task_list):
-    """Displays all tasks with their status."""
     if not task_list:
         print("No tasks available.")
     else:
@@ -30,7 +24,6 @@ def display_tasks(task_list):
             status = "Done" if task["completed"] else "Pending"
             print(f"- {task['name']} [{status}]")
 
-# Main program loop
 def main():
     tasks = []
     while True:
@@ -38,17 +31,16 @@ def main():
         choice = input("Enter your choice (1-4): ")
         if choice == "1":
             task_name = input("Enter task name: ")
-            add_task(tasks, task_name)  # Call to procedure
+            add_task(tasks, task_name)
         elif choice == "2":
             task_name = input("Enter task name to mark as complete: ")
-            complete_task(tasks, task_name)  # Call to procedure
+            complete_task(tasks, task_name)
         elif choice == "3":
-            display_tasks(tasks)  # Call to procedure
+            display_tasks(tasks)
         elif choice == "4":
             print("Exiting the program.")
             break
         else:
             print("Invalid choice. Please try again.")
 
-# Call the main function to start the program
 main()
