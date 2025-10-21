@@ -1,7 +1,8 @@
-# AP Create Task
+# Assignment Calendar
+## Easy calendar for keeping track of your assignments
 
-
-## TASKS
-
-# * Create program 
-# * 
+## Features
+### File I/O ToDo list
+### Saves your tasks
+### Mark tasks as done
+### Add and remove tasks
